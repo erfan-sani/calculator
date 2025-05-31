@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+
+</head>
+<body>
+    <div class="calculator-box">
+        <div id="display" class="screen">0</div>
+        
+        <div class="buttons">
+            <button onclick="clearAll()" class="btn clear-btn">C</button>
+            <button onclick="back()" class="btn clear-btn">⌫</button>
+            <button onclick="addOp('(')" class="btn operator">(</button>
+            <button onclick="addOp(')')" class="btn operator">)</button>
+            
+            <button onclick="appendOperator('Math.sqrt(')" class="btn special-func">√</button>
+            <button onclick="addNum('7')" class="btn number">7</button>
+            <button onclick="addNum('8')" class="btn number">8</button>
+            <button onclick="addNum('9')" class="btn number">9</button>
+            
+            <button onclick="appendOperator('Math.pow(')" class="btn special-func">x<sup>y</sup></button>
+            <button onclick="addNum('4')" class="btn number">4</button>
+            <button onclick="addNum('5')" class="btn number">5</button>
+            <button onclick="addNum('6')" class="btn number">6</button>
+            
+            <button onclick="addOp('/')" class="btn operator">÷</button>
+            <button onclick="addNum('1')" class="btn number">1</button>
+            <button onclick="addNum('2')" class="btn number">2</button>
+            <button onclick="addNum('3')" class="btn number">3</button>
+            
+            <button onclick="addOp('*')" class="btn operator">×</button>
+            <button onclick="addNum('0')" class="btn number">0</button>
+            <button onclick="addNum('.')" class="btn number">.</button>
+            <button onclick="calculate()" class="btn equals">=</button>
+            
+            <button onclick="addOp('+')" class="btn operator">+</button>
+            <button onclick="addOp('-')" class="btn operator">-</button>
+        </div>
+    </div>
+    <script src="Calculator.js"></script>
+
+
+</body>
+</html>

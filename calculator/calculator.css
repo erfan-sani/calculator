@@ -1,0 +1,173 @@
+
+        :root {
+            --main-bg: #f5f7ff;
+            --calc-bg: #ffffff;
+            --btn-color: #f0f4ff;
+            --operator-btn: #ffd6e7;
+            --operator-hover: #ffc0d5;
+            --num-color: #5e72e4;
+            --num-hover: #e6ebff;
+            --equals-btn: #7ce8c0;
+            --equals-hover: #5ad8b0;
+            --pink-text: #ff6b9e;
+            --green-text: #4fd1c5;
+            --yellow-text: #ffd166;
+            --text-color: #3a3a3a;
+            --shadow: rgba(149, 157, 165, 0.1) 0px 4px 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: none;
+            outline: none;
+            transition: all 0.15s ease;
+        }
+
+        body {
+            background: var(--main-bg);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .calculator-box {
+            width: 100%;
+            max-width: 300px;
+            background: var(--calc-bg);
+            border-radius: 14px;
+            padding: 16px;
+            box-shadow: var(--shadow);
+            height: 380px;
+        }
+
+        .screen {
+            background: var(--calc-bg);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 12px;
+            text-align: right;
+            font-size: 1.6rem;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            word-break: break-all;
+            color: var(--text-color);
+            font-weight: 600;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        .btn {
+            height: 38px; /* Very compact button height */
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            background: var(--btn-color);
+            color: var(--num-color);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .number {
+            color: var(--num-color);
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .number:hover {
+            background: var(--num-hover);
+        }
+
+        .operator {
+            background: var(--operator-btn);
+            color: var(--pink-text);
+        }
+
+        .operator:hover {
+            background: var(--operator-hover);
+        }
+
+        .clear-btn {
+            color: var(--green-text);
+            background: white;
+        }
+
+        .equals {
+            background: var(--equals-btn);
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .equals:hover {
+            background: var(--equals-hover);
+        }
+
+        .special-func {
+            background: var(--yellow-text);
+            color: var(--text-color);
+        }
+
+        .special-func:hover {
+            background: #ffc847;
+        }
+
+        @media (min-width: 400px) {
+            .calculator-box {
+                max-width: 320px;
+                padding: 18px;
+                height: 400px;
+            }
+            
+            .screen {
+                font-size: 1.8rem;
+                min-height: 70px;
+            }
+            
+            .btn {
+                height: 42px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 300px) {
+            .calculator-box {
+                padding: 14px;
+                height: 360px;
+            }
+            
+            .screen {
+                font-size: 1.5rem;
+                min-height: 55px;
+                padding: 10px;
+            }
+            
+            .btn {
+                height: 36px;
+                font-size: 1rem;
+            }
+        }
+   
